@@ -1,7 +1,8 @@
 package ru.job4j.condition;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.*;
 
 public class PointTest {
 
@@ -14,7 +15,7 @@ public class PointTest {
         double out = Point.distance(x1, y1, x2, y2);
         double expected = 0;
         double delta = 0.01;
-        Assert.assertEquals(expected, out, delta);
+        assertThat(out).isCloseTo(expected, offset(delta));
     }
 
     @Test
@@ -26,7 +27,7 @@ public class PointTest {
         double out = Point.distance(x1, y1, x2, y2);
         double expected = 2;
         double delta = 0.01;
-        Assert.assertEquals(expected, out, delta);
+        assertThat(out).isCloseTo(expected, offset(delta));
     }
 
     @Test
@@ -38,6 +39,6 @@ public class PointTest {
         double out = Point.distance(x1, y1, x2, y2);
         double expected = 4;
         double delta = 0.01;
-        Assert.assertEquals(expected, out, delta);
+        assertThat(out).isCloseTo(expected, offset(delta));
     }
 }
