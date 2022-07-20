@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class X2Test {
+class X2Test {
 
     @Test
     public void when_A10B0C0X2_then40() {

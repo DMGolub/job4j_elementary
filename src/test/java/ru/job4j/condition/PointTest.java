@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class PointTest {
+class PointTest {
 
     @Test
     public void when_00To00_then0() {
