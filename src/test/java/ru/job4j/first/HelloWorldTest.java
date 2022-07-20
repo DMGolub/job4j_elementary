@@ -1,10 +1,10 @@
 package ru.job4j.first;
 
-import static org.assertj.core.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+
+import static org.assertj.core.api.Assertions.*;
 
 public class HelloWorldTest {
 

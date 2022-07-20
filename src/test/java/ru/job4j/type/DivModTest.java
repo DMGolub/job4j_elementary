@@ -1,18 +1,20 @@
-package ru.job4j.first;
+package ru.job4j.type;
+
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class PrintTest {
+class DivModTest {
 
     @Test
     public void test() {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
-        Print.main(null);
-        assertThat(out.toString()).isEqualTo("Сегодня я молодец!");
+        DivMod.main(null);
+        String ln = System.lineSeparator();
+        assertThat(out.toString()).isEqualTo("3" + ln + "2" + ln);
     }
 }

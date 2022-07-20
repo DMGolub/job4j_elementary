@@ -1,4 +1,4 @@
-package ru.job4j.first;
+package ru.job4j.type;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -6,13 +6,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class PrintTest {
+class IntegerTypeConversionTest {
 
     @Test
-    public void test() {
+    public void testOut() {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
-        Print.main(null);
-        assertThat(out.toString()).isEqualTo("Сегодня я молодец!");
+        IntegerTypeConversion.main(null);
+        String ln = System.lineSeparator();
+        assertThat(out.toString()).isEqualTo("1" + ln + "1" + ln);
     }
 }
