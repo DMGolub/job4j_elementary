@@ -9,6 +9,7 @@ class CinemaTest {
 
     @Test
     public void checkEmptyPlace() {
+        System.out.println("Test checkEmptyPlace");
         Place[][] places = {
                 {null, null, new Place(0, 2)},
                 {null, new Place(1, 1), new Place(1, 2)},
@@ -21,6 +22,7 @@ class CinemaTest {
 
     @Test
     public void checkEmptyPlaceIsNotNull() {
+        System.out.println("Test checkEmptyPlaceIsNotNull");
         Place[][] places = {
                 {new Place(0, 0), null, new Place(0, 2), null, new Place(0, 4)},
                 {null, new Place(1, 1), null, new Place(1, 3), null},
@@ -35,6 +37,7 @@ class CinemaTest {
 
     @Test
     public void checkEmptyPlaceIsNull() {
+        System.out.println("Test checkEmptyPlaceIsNull");
         Place[][] places = {
                 {new Place(0, 0), null, new Place(0, 2), null, new Place(0, 4)},
                 {null, new Place(1, 1), null, new Place(1, 3), null},
